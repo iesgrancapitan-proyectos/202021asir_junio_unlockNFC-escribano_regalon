@@ -3,7 +3,7 @@
 ## Autor/es: José Miguel Escribano Ruiz e Iván Regalón Hernández
 
 1. Descripción del proyecto
-breve descripción holaaaa
+Nuestro proyecto consistirá en un sistema de aperturas de cerraduras por NFC-RFID. Cada usuario dispondrá de su teléfono móvil o una llave, con la que podrá abrir las diferentes puertas en las que tenga permisos para acceder
 
 2. Información sobre despliegue
 Resumen de recursos y cómo instalarlo.
