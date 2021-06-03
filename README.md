@@ -12,4 +12,3 @@ Resumen de recursos y cómo instalarlo.
 3. Información sobre cómo usarlo (manual de usuario)
 Puede poner el link a la parte de la wiki del manual.
 
-![Error](imagenes/bluetooh.png)
