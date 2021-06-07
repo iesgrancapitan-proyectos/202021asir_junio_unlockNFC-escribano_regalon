@@ -1,3 +1,6 @@
+
+#CLIENTE
+
 ## Este script se encargará de generar el socket sobre el cliente e intentará estar constantemente intentado conectar con el socket servidor.
 ## Tendremos que indicar un puerto distinto para cada una de las diferentes raspberry.
 ## Cuando consigue conectarse con el socket servidor recibé los datos que envia el servidor a través de socket para ejecutar el script de python que se encargará

@@ -1,3 +1,6 @@
+
+#CLIENTE
+
 ## Este script es utilizado para crear un socket cliente sobre el puerto 11.000
 ## Este puerto es utilizado para el grabado de las llaves NFC
 ## Se encarga de intentar conectar constantemente contra el socket servidor en el puerto 11.000, cuando recibe información a través del socket se encarga de almacenarla en

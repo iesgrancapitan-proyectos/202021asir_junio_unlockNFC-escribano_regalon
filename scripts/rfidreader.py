@@ -1,3 +1,6 @@
+
+#CLIENTE
+
 ## Este script es el encargado de leer la llave o dispositivo movil cuando es ejecutado mediante alguno de los socket.
 ## Durante la ejecución de este script se almacena el id del profesor y el id del dispositivo que se acaba de leer y 
 ## se realiza una consulta SQL contra el servidor de base de datos. Si la consulta devulve alguna coincidencia nos permitirá abrir la cerradura,
