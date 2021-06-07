@@ -8,8 +8,9 @@ Nuestro proyecto consistirá en un sistema de aperturas de cerraduras por NFC-RF
 2. Información sobre despliegue
 Resumen de recursos y cómo instalarlo.
 
-3. Información sobre cómo usarlo (manual de usuario)
-Puede poner el link a la parte de la wiki del manual.
+3. Información sobre cómo usarlo (manual de usuario) [Manual de Usuario](Manual_Usuario) 
+
+
 
 
 
