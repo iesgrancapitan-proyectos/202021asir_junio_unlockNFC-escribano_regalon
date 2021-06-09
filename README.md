@@ -7,7 +7,7 @@ Nuestro proyecto consistirá en un sistema de aperturas de cerraduras por NFC-RF
 
 2. Información sobre despliegue.  
 [Resumen de recursos](https://github.com/iesgrancapitan-proyectos/202021asir_junio_unlockNFC-escribano_regalon/wiki/7Doc_Recursos#recursos)  
-[Implementación](https://github.com/iesgrancapitan-proyectos/202021asir_junio_unlockNFC-escribano_regalon/wiki/7Doc_Recursos#recursos)
+[Implementación](https://github.com/iesgrancapitan-proyectos/202021asir_junio_unlockNFC-escribano_regalon/wiki/6Doc_Implantaci%C3%B3n#implantaci%C3%B3n)
 
 3. Información sobre cómo usarlo  
 [Manual de Usuario](https://github.com/iesgrancapitan-proyectos/202021asir_junio_unlockNFC-escribano_regalon/wiki/Manual_Usuario#manual-de-usuario) 
