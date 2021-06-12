@@ -96,32 +96,7 @@ if (isset($_SESSION['usuario'])){
         if(isset($_POST['informatica'])) {
 $id_puerta = 1;
 exec('python3 /home/ubuntu/puerta1.py '.$idprofesor.' '.$id_puerta.' > /dev/null &');
-
-
-//Prueba SSH2
-//$server   = "192.168.1.128"; // server IP/hostname of the SSH server
-//$username = "pi"; // username for the user you are connecting as on the SSH server
-//$password = "abcd1234@"; // password for the user you are connecting as on the SSH server
-//$command  = "python3 /home/pi/Desktop/rfidreader.py ".$idprofesor." ".$id_puerta.""; // could be anything available on the server you are SSH'ing to
-
-// Establish a connection to the SSH Server. Port is the second param.
-//$connection = ssh2_connect($server, 22);
-
-// Authenticate with the SSH server
-//ssh2_auth_password($connection, $username, $password);
-
-// Execute a command on the connected server and capture the response
-//$stream = ssh2_exec($connection, $command);
-
-// Sets blocking mode on the stream
-//stream_set_blocking($stream, true);
-
-// Get the response of the executed command in a human readable form
-//$output = stream_get_contents($stream);
-
-// echo output
-//echo "<pre>{$output}</pre>";
-
+print(exec.stdout.read());
 	    
         }
         if(isset($_POST['ciencias'])) {

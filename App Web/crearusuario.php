@@ -60,79 +60,16 @@ if (isset($_SESSION['usuario'])){
 <?php
 		        if(isset($_REQUEST["prueba"])){			
 //Pruebas Socket
-error_reporting(E_ALL);
+$command = escapeshellcmd('python3 /var/www/html/nfc/prueba_movil.py');
+$output = shell_exec($command);
+//echo $output;
 
-/* Permitir al script esperar para conexiones. */
-set_time_limit(1);
-
-/* Activar el volcado de salida implícito, así veremos lo que estamos obteniendo
- * mientras llega. */
-ob_implicit_flush();
-
-$address = '172.31.31.179';
-$port = 10001;
-
-if (($sock = socket_create(AF_INET, SOCK_STREAM, SOL_TCP)) === false) {
-    echo "socket_create() falló: razón: " . socket_strerror(socket_last_error()) . "\n";
-}
-
-if (socket_bind($sock, $address, $port) === false) {
-    echo "socket_bind() falló: razón: " . socket_strerror(socket_last_error($sock)) . "\n";
-}
-
-if (socket_listen($sock, 5) === false) {
-    echo "socket_listen() falló: razón: " . socket_strerror(socket_last_error($sock)) . "\n";
-}
-
-do {
-    if (($msgsock = socket_accept($sock)) === false) {
-        echo "socket_accept() falló: motivo " . socket_strerror(socket_last_error($sock)) . "\n";
-        break;
-    }
-
-    /* Enviar instrucciones. */
-    $msg = "1000";
-    socket_write($msgsock, $msg, strlen($msg));
-do {
-        if (false === ($buf = socket_read($msgsock, 2048))) {
-            #echo "socket_read() falló: razón: " . socket_strerror(socket_last_error($msgsock)) . "\n";
-            break 2;
-        }
-echo "Su identificador es: ";
-echo $buf;
 ?>
-			<input type="text" name="movilnfc" id="movilnfc" class="form-control" value="<?php echo $buf;?>">
+			<input type="text" name="movilnfc" id="movilnfc" class="form-control" value="<?php echo $output;?>">
 			<br><?php
-socket_close($msgsock);
-        if ($buf == 'shutdown') {
-            socket_close($msgsock);
-            break 2;
-        }
-    } while (true);
-    socket_close($msgsock);
-} while (true);
 
-socket_close($sock);
-
-
-
-
-//$idprofesor=1000;
-//$id_puerta=1000;
-//exec('python3 /home/usuario/Escritorio/Socker_server.py '.$idprofesor.' '.$id_puerta.' > /dev/null &');
-			//$server   = "192.168.1.122";
-			//$username = "pi"; 
-			//$password = "abcd1234@"; 
-			//$command  = "python3 /home/pi/Desktop/leermovil.py"; 
-			//$connection = ssh2_connect($server, 22);
-			//ssh2_auth_password($connection, $username, $password);
-			//$stream = ssh2_exec($connection, $command);
-			//stream_set_blocking($stream, true);
-			//$output = stream_get_contents($stream);
 			}
-			?>
-			<!--<input type="text" name="movilnfc" id="movilnfc" class="form-control" value="<?php echo $buf;?>">
-			<br>-->
+			?>		
 		      
 		      <button type="submit" class="btn btn-warning" name="regmovil">Registro Movil</button><br><br>
 		      <a class="btn btn-primary" href="menuadmin.php" role="button">Menu Administración</a>
@@ -198,20 +135,10 @@ socket_close($msgsock);
 
 socket_close($sock);
 
-		//$server   = "192.168.1.128";
-		//$username = "pi"; 
-		//$password = "abcd1234@"; 
-		//$command  = "python3 /home/pi/Desktop/escribir.py ".$rfid.""; 
-		//$connection = ssh2_connect($server, 22);
-		//ssh2_auth_password($connection, $username, $password);
-		//$stream = ssh2_exec($connection, $command);
-		//stream_set_blocking($stream, true);
-		//$output = stream_get_contents($stream);
 		
 		include ('conexion.php');
 		$insert = "INSERT INTO profesores(usuario,contraseña,email,rfid) VALUES ('$usuario',md5('$contrasena'),'$email',$rfid)";
 		$result = mysqli_query($conn,$insert);
-		//echo $insert;
 		header("Refresh:2; url=listausuarios.php");
 		}
 		if(isset($_REQUEST['regmovil'])) {
@@ -222,7 +149,6 @@ socket_close($sock);
 		$codigo = $_REQUEST['movilnfc'];
 		$insert = "INSERT INTO profesores(usuario,contraseña,email,rfid) VALUES ('$usuario',md5('$contrasena'),'$email',$codigo)";
 		$result = mysqli_query($conn,$insert);
-		//echo $insert;
 		header('Location: listausuarios.php');
 		}
 		?>
