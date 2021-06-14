@@ -11,7 +11,7 @@ En esta parte se desarrollara el despliegue y los recursos usados para tener nue
 [Implementación](https://github.com/iesgrancapitan-proyectos/202021asir_junio_unlockNFC-escribano_regalon/wiki/6Doc_Implantaci%C3%B3n#implantaci%C3%B3n)
 
 3. Información sobre cómo usarlo  
-En este punto habrá 2 manuales uno de usuario y otro de administrador para tener una idea de como usar la aplicación una vez montada e instalada.  
+En este punto estará el manual de usuario para tener una idea de como usar la aplicación una vez montada e instalada.  
 [Manual de Usuario](https://github.com/iesgrancapitan-proyectos/202021asir_junio_unlockNFC-escribano_regalon/wiki/Manual_Usuario#manual-de-usuario) 
 
 
