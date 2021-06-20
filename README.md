@@ -1,5 +1,5 @@
 
-#  Proyecto Integrado del IES Gran Capitán: Apertura de cerraduras Con NFC-RFID
+#  Proyecto Integrado del IES Gran Capitán: "Apertura de cerraduras Con NFC-RFID"
 ## Autor/es: José Miguel Escribano Ruiz e Iván Regalón Hernández
 
 1. Descripción del proyecto  
